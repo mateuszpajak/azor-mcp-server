@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' version '3.31.4'
+}
+
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:3.31.4")
+    implementation 'io.quarkiverse.mcp:quarkus-mcp-server-stdio:1.10.0'
+    testImplementation 'io.quarkus:quarkus-junit5'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
